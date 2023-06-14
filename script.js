@@ -1,22 +1,51 @@
-// Classe - Template Molde Modelo
+// Classe: Template Molde Modelo
  class Person {
+
+    // variavéis | Métodos static
+    // static hands = 2;
     // variavéis Globais
-    age = 10;
+    static age = 10;
     // steps = 0;
 
     constructor(name) {
         this.name = name;
+    // }
+    // sayHi() {
+    //     console.log(`Oi, eu sou ${this.name} minha idade é: ${Person.age} anos  e tenho ${Person.hands} mãos!`);
+    // 
     }
- }
-// Classes Herança
-    class Stundent extends Person {
+   
+}
+// classes: Factory
+function createPerson(name, age) {
+    let p = new Person(name);
+    p.age = age;
+    return p;
+}
+// Objeto do Factory createPerson
+let p1 = createPerson("Sérgio", 52);
+console.log(`${p1.name} tem ${p1.age} aos!`);
+// let p1 = new Person("Sérgio");
+// Person.age = 52;
+// p1.sayHi();
 
-        constructor(name, id) {
-            super(name);
-            this.id = id;
-        }
-    }
+// Classes|Função: Herança
+    // class Stundent extends Person {
 
+    //     constructor(name, id) {
+    //         super(name);
+    //         this.id = id;
+    //     }
+    //     sayHello() {
+    //         super.sayHi();
+    //         // console.log(`${this.name} é um estudadnte e diz Olá!`);
+    //     }
+    // }
+    
+    // let p1 = new Stundent("Sérgio", 1970);
+    // p1.age = 52;
+    // p1.sayHello();
+    // console.log(`${p1.name} tem ${p1.age} anos e matricula  #${p1.id}`)
 
     // constructor(firstName, lastName) {
     //     this.firstName = firstName;
