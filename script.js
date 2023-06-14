@@ -23,8 +23,9 @@ function createPerson(name, age) {
     return p;
 }
 // Objeto do Factory createPerson
-let p1 = createPerson("Sérgio", 52);
-console.log(`${p1.name} tem ${p1.age} aos!`);
+// let p1 = createPerson("Sérgio", 52);
+// console.log(`${p1.name} tem ${p1.age} aos!`);
+
 // let p1 = new Person("Sérgio");
 // Person.age = 52;
 // p1.sayHi();
